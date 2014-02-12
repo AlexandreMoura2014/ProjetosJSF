@@ -8,6 +8,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Alô mundo!</h1>
+        <h1>Instalação do Maven!</h1>
     </body>
 </html>
