@@ -10,17 +10,27 @@
         <h1>Cadastro de contas</h1>
         <hr/>
         <h:form>
-            <h:panelGrid columns="2">
+            <h:panelGrid columns="4">
                 <h:outputLabel value="Código"/>
-                <h:inputText id="codigo" value=""/>
-                <h:outputLabel value="Descritção"/>
-                <h:inputText id="descricao" value=""/>
-                <h:outputLabel value="Tipo"/>
+                <h:inputText id="codigo" value="" maxlength="30" />
+                <h:outputLabel value="Código Reduzido"/>
+                <h:inputText id="codReduzido" value="" maxlength="10"/>
+                <h:outputLabel value="Descrição"/>
+                <h:inputText id="descricao" value="" maxlength="50"/>
+                <h:outputLabel value="Natureza"/>
                 <h:selectOneMenu id="tipo" value="">
-                    <f:selectItem itemValue="1" itemLabel="Sintética"/>
                     <f:selectItem itemValue="0" itemLabel="Analítica"/>
+                    <f:selectItem itemValue="1" itemLabel="Sintética"/>
                 </h:selectOneMenu>
-                <h:commandButton value="salvar"/>                
+                <h:outputLabel value="Tipo"/>
+                <h:selectOneMenu id="tipoConta" value="">
+                    <f:selectItem itemValue="0" itemLabel="Credor ou Devedor"/>
+                    <f:selectItem itemValue="1" itemLabel="Credor"/>
+                    <f:selectItem itemValue="2" itemLabel="Devedor"/>
+                </h:selectOneMenu>
+                <h:outputLabel value=""/>
+                <br/>
+                <h:commandButton value="Salvar"/>                
             </h:panelGrid>
         </h:form>
     </h:body>
